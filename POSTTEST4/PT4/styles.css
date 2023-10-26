@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW1RvZY7DMmtTTmCkDI7mXy3ynLZhndkVIhxyP14teZIMzpoyQLtm2Gc2g8O7XjUbHyBTDfzNvVNS_UX_-CQ6gtSN_G13nb-TDI-3e8B8U_ESxghU3BXxcFNyiuVXyWR_WUcHOH9e9R-VN-3MVBYBY8yDMcXXoBdRIe1pcrFAL1BFpEJRGnOqFrjkpEg0/s320/IMG-20221222-WA0000.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    font-family: Lucida Handwriting, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(72, 61, 139);
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+h1 {
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+.spanstyle2 {
+    color: orange;
+}
+
+.spanstyle1 {
+    color: red;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
