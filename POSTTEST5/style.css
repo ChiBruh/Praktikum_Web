@@ -1,0 +1,64 @@
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+    text-align: left;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.ul1 {
+    display: flex;
+    list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
+    gap: 10px;
+    background: url('https://img.freepik.com/free-photo/bright-pop-landscape-design_23-2149213461.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698019200&semt=ais') no-repeat center fixed;
+    background-size: cover;
+    background-color: rgba(136, 239, 46, 0.2);
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 20px 0;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#contact img {
+    text-align: left;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#contact {
+    text-align: center;
+    vertical-align: middle;
+}
