@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Modul 5</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="style.css">
+    <div class="grid-container">
+        <div class="item1">
+            <nav class=".">
+                <h1>
+                    <span class="spanstyle2">Ichiro</span><span class="spanstyle1">Albert</span>
+
+                </h1>
+                <nav class="nav1">
+                    <ul class="ul1">
+
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </nav>
+        </div>
+        <div class="item2">
+            <section id="about">
+                <h2>About:</h2>
+                <p>Whassap gengs pung teman sekampungkuhh</p>
+                <p>Kenalan namaku Ichiro, selamat datang di websiteku!</p>
+            </section>
+
+            <section id="skill">
+                <h2>Skill</h2>
+                <ul>
+                    <li>Makan</li>
+                    <li>Minum</li>
+                    <li>Mabar</li>
+                    <li>kodeng</li>
+                </ul>
+            </section>
+
+            <section id="project">
+                <h2>Project</h2>
+                <p>POST TEST 6</p>
+            </section>
+        </div>
+        <div class="item3">
+        </div>
+        <div class="item3">
+            <section id="contact">
+                <h2>Contact</h2>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFP8HnotIvUdAqkxFSwkZc4_jKrUFBropQuz2pTiDFIlDKoNZZBOVsImtJvqgSO7XeF9oxjW4D_PVKdNYQx72UlyGAicpJcJamINfk3afOHgYu8LwqFRw72vxZRcSl-V_iGI9gpTrpzaTIzBhgoU4hjJbCtgyinhe49a-RgtTYg6qfDNE_kGb7euzy-qM/s320/IMG-20200413-WA0017.jpg"
+                    alt="Kafir.jpg">
+                <p>Name: Ichiro Albert M. Sundah</p>
+                <p>Email: <a href="mailto:ichiroalbert@gmail.com">ichiroalbert@gmail.com</a></p>
+                <form>
+                    <label for="message">Message for me:</label>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
+        <div class="item4">
+            <section id="rate-my-kindness">
+                <h2><strong>Rate my kindness:</strong></h2>
+                <form action="">
+                    <ul>
+                        <li><input type="radio" name="kindness" value="sangat_baik" id="sangat_baik"><label for="sangat_baik">-Sangat Baik-</label></li>
+                        <li><input type="radio" name="kindness" value="baik" id="baik"><label for="baik">-Baik-</label></li>
+                        <li><input type="radio" name="kindness" value="normal" id="normal"><label for="normal">-Normal-</label></li>
+                        <li><input type="radio" name="kindness" value="kece" id="kece"><label for="kece">-Kece-</label></li>
+                        <li><input type="radio" name="kindness" value="keren" id="keren"><label for="keren">-Keren-</label></li>
+                    </ul>
+                    <button type="button">Rate Me!</button>
+                </form>
+            </section>
+        </div>
+        <div class="item5">
+            <section id="sumbangan-sedekah">
+                <h2><strong>Sumbangan Sedekah:</strong></h2>
+                <form>
+                    <label for="your-email">Your Email:</label>
+                    <input type="email" id="your-email" name="your-email" required>
+                    <br>
+                    <label for="your-password">Your Password:</label>
+                    <input type="password" id="your-password" name="your-password" required>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+
+
+<body>
+
+    <header>
+        <h1>Haram Restaurant</h1>
+    </header>
+
+    <section>
+        <form id="orderForm">
+            <table>
+                <tr>
+                    <td>Makanan:</td>
+                    <td>
+                        <select id="makanan" name="makanan">
+                            <option value="babi_kecap">Babi Kecap</option>
+                            <option value="sup_kelelawar">Sup Kelelawar</option>
+                            <option value="haram_special">Haram's Special</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jumlah:</td>
+                    <td><input type="number" id="jumlah" name="jumlah" min="1" required></td>
+                </tr>
+                <tr>
+                    <td>Voucher:</td>
+                    <td><input type="text" id="voucher" name="voucher"></td>
+                </tr>
+            </table>
+
+            <button type="button" onclick="calculateTotal()">Submit Order</button><br>
+
+            <p>
+                <strong>Nama Pesanan:</strong>
+                <span id="namaPesanan"></span>
+            </p>
+            <p>
+                <strong>Jumlah Pesanan:</strong>
+                <span id="jumlahPesanan"></span>
+            </p>
+            <p>
+                <strong>Total Diskon:</strong>
+                <span id="totalDiskon"></span>
+            </p>
+            <p>
+                <strong>Total Harga:</strong>
+                <span id="totalHarga"></span>
+            </p>
+        </form>
+    </section>
+
+    <script>
+        let restaurant = {
+            Makanan: '',
+            Jumlah: 0,
+            Voucher: '',
+        };
+
+        function calculateTotal() {
+            // Mengambil Nilai dari form
+            restaurant.Makanan = document.getElementById('makanan').value;
+            restaurant.Jumlah = parseInt(document.getElementById('jumlah').value);
+            restaurant.Voucher = document.getElementById('voucher').value.toLowerCase();
+
+            // HARGA MAKANAN
+            let priceMap = {
+                'babi_kecap': 1500000, //satu juta lima ratus ribu rupiah
+                'sup_kelelawar': 2000000, //dua juta rupiah
+                'haram_special': 10000000, //sepuluh juta rupiah
+            };
+
+            let pricePerItem = priceMap[restaurant.Makanan];
+            let totalPrice = restaurant.Jumlah * pricePerItem;
+            let discount = 0;
+
+            // Gunakan diskon jika kode voucher valid
+            if (restaurant.Voucher === 'progaming') {
+                discount = 0.20; // diskon 20%
+                totalPrice -= totalPrice * discount;
+            }
+
+            // Display pesanan secara detail
+            document.getElementById('namaPesanan').textContent = restaurant.Makanan;
+            document.getElementById('jumlahPesanan').textContent = restaurant.Jumlah;
+            document.getElementById('totalDiskon').textContent = (discount * 100) + '%';
+            document.getElementById('totalHarga').textContent = totalPrice.toFixed(2) + 'Rp';
+        }
+    </script>
+
+</body>
+
+</html>
